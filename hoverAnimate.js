@@ -2,8 +2,8 @@ var mouseenter = function () {
   var animatic = document.getElementsByTagName('animatic')[0];
   for (i=0 ; i<5 ; i++) {
     setTimeout(function () {
-      this.animatic.style.backgroundImage = 'url(assets/games/' + this.i + '.png)';
-    }.bind({animatic: animatic, i: i}), i * 100 + 100);
+      this.animatic.style.backgroundImage = 'url(assets/about/' + this.i + '.png)';
+    }.bind({animatic: animatic, i: i}), i * 50 + 100);
   }
 };
 
@@ -11,8 +11,8 @@ var mouseleave = function () {
   var animatic = document.getElementsByTagName('animatic')[0];
   for (i=0 ; i<5 ; i++) {
     setTimeout(function () {
-      this.animatic.style.backgroundImage = 'url(assets/games/' + (5-this.i) + '.png)';
-    }.bind({animatic: animatic, i: i}), i * 100 + 100);
+      this.animatic.style.backgroundImage = 'url(assets/about/' + (4 - this.i) + '.png)';
+    }.bind({animatic: animatic, i: i}), i * 50 + 100);
   }
 };
 
@@ -33,7 +33,7 @@ onload = function () {
   animatics = document.getElementsByTagName('animatic');
   triggers = document.getElementsByClassName('trigger');
   for (i=0 ; i<animatics.length ; i++) {
-    animatics[i].style.backgroundImage = 'url(' + 'assets/games/0.png' + ')';
+    animatics[i].style.backgroundImage = 'url(' + 'assets/updates/0.png' + ')';
   }
   for (i=0 ; i<triggers.length ; i++) {
     triggers[i].onmouseenter = mouseenter;
